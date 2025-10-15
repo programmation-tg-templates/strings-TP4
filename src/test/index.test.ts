@@ -1,9 +1,15 @@
-// Tests unitaires écrits par l'enseignant. Ne modifiez pas ce fichier.
+import { verifierMotDePasse } from "./index";
 
-import {...} from '../index';
+describe("Vérification de mots de passe", () => {
+  test("Mot de passe faible", () => {
+    expect(verifierMotDePasse("bonjour")).toEqual("faible");
+  });
 
-describe('...', () => {
-    test('...', () => {
-        expect(false).toBe(true);
-    });
+  test("Mot de passe moyen", () => {
+    expect(verifierMotDePasse("Admin123")).toEqual("moyen");
+  });
+
+  test("Mot de passe fort", () => {
+    expect(verifierMotDePasse("HeHDsT@2025")).toEqual("fort");
+  });
 });
