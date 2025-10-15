@@ -1,4 +1,4 @@
-import { verifierMotDePasse } from "./index";
+import { verifierMotDePasse } from "../index";
 
 describe("Vérification de mots de passe", () => {
   test("Mot de passe faible", () => {
